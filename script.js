@@ -11,13 +11,13 @@
                 total  = 100%
    ------------------------------------------------ */
 const COLORS = [
-  { id:'yellow', label:'Are happy',            hex:'#f39c12', guaranteed:true,  weight:17.8 },
-  { id:'blue',   label:'Are sad',              hex:'#3498db', guaranteed:true,  weight:17.8 },
-  { id:'purple', label:'Have a bad day',       hex:'#9b59b6', guaranteed:true,  weight:17.8 },
-  { id:'red',    label:"Don't know what to do",hex:'#e74c3c', guaranteed:true,  weight:17.8 },
-  { id:'green',  label:'Miss me',              hex:'#2ecc71', guaranteed:true,  weight:17.8 },
-  { id:'pink',   label:'Why i love u',         hex:'#e91e8c', guaranteed:false, weight:10   },
-  { id:'black',  label:'Just open it',         hex:'#546e7a', guaranteed:false, weight:1    },
+  { id:'yellow', label:'Feliz?',            hex:'#f39c12', guaranteed:true,  weight:17.8 },
+  { id:'blue',   label:'Triste?',              hex:'#3498db', guaranteed:true,  weight:17.8 },
+  { id:'purple', label:'Mal Dia',       hex:'#9b59b6', guaranteed:true,  weight:17.8 },
+  { id:'red',    label:"Perdido...",hex:'#e74c3c', guaranteed:true,  weight:17.8 },
+  { id:'green',  label:'Miss me?',              hex:'#2ecc71', guaranteed:true,  weight:17.8 },
+  { id:'pink',   label:'WWhy u',         hex:'#e91e8c', guaranteed:false, weight:10   },
+  { id:'black',  label:'🌟',         hex:'#546e7a', guaranteed:false, weight:1    },
 ];
 // total: 5×17.8 + 10 + 1 = 100 ✓
 
