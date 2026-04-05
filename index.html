@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open When U...</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Dancing+Script:wght@500;600;700&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SCENE -->
+  <div class="scene" id="scene">
+    <div class="dust" id="dust"></div>
+
+    <div class="desk" id="desk">
+
+      <!-- LEFT: Folder — tabs on the RIGHT side, vertical -->
+      <div class="folder-widget" id="folder-widget" onclick="openFolder()" title="Ver mis recuerdos">
+        <div class="folder-cover">
+          <span class="folder-icon">📂</span>
+          <span class="folder-name">Recuerdos</span>
+        </div>
+        <div class="folder-tabs">
+          <div class="ftab ftab-yellow" title="Are happy"></div>
+          <div class="ftab ftab-blue"   title="Are sad"></div>
+          <div class="ftab ftab-purple" title="Have a bad day"></div>
+          <div class="ftab ftab-red"    title="Don't know what to do"></div>
+          <div class="ftab ftab-green"  title="Miss me"></div>
+          <div class="ftab ftab-pink"   title="Why i love u"></div>
+          <div class="ftab ftab-black"  title="Just open it"></div>
+        </div>
+      </div>
+
+      <!-- CENTER: Glass jar -->
+      <div class="jar-wrapper">
+        <div class="jar" id="jar" onclick="clickJar()" title="¡Tócame! ♡">
+          <div class="jar-lid">
+            <div class="jar-lid-knob"></div>
+            <div class="jar-lid-band"></div>
+          </div>
+          <div class="jar-body">
+            <div class="jar-glare jar-glare-1"></div>
+            <div class="jar-glare jar-glare-2"></div>
+            <div class="jar-rolls-inside" id="jar-peeks"></div>
+            <div class="jar-label">
+              <span class="jar-label-heart">♡</span>
+              <span class="jar-label-text">I love u</span>
+            </div>
+          </div>
+          <div class="jar-base-ring"></div>
+        </div>
+        <div class="jar-shadow"></div>
+        <p class="jar-hint">tócame ♡</p>
+      </div>
+
+      <!-- RIGHT: Paper + Post-it -->
+      <div class="paper-area">
+        <div class="paper-note" id="paper-note">
+          <div class="tape tape-tl"></div>
+          <div class="tape tape-tr"></div>
+          <div class="paper-content">
+            <h1 class="paper-title">Open when u...</h1>
+            <ul class="paper-list">
+              <li class="item-yellow">● Are happy</li>
+              <li class="item-blue">● Are sad</li>
+              <li class="item-purple">● Have a bad day</li>
+              <li class="item-red">● Don't know what to do</li>
+              <li class="item-green">● Miss me</li>
+            </ul>
+          </div>
+        </div>
+        <div class="postit-note" id="postit">
+          <p class="postit-pink">Why i love u</p>
+          <p class="postit-black">Just open it</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ROLLS SCREEN — max 5 per row -->
+  <div class="rolls-screen" id="rolls-screen" style="display:none">
+    <p class="rolls-hint">Elige un rollito ♡</p>
+    <div class="rolls-area" id="rolls-area"></div>
+    <button class="btn-cancel" onclick="cancelRolls()">← Volver</button>
+  </div>
+
+
+  <!-- REVEAL MODAL -->
+  <div class="reveal-overlay" id="reveal-overlay" style="display:none">
+    <div class="reveal-box">
+      <div class="ribbon-stage">
+        <div class="ribbon-piece" id="ribbon-piece">
+          <span class="ribbon-bow">✦</span>
+        </div>
+      </div>
+      <div class="reveal-image-wrap">
+        <img class="reveal-img" id="reveal-img" src="" alt="">
+        <div class="reveal-no-img" id="reveal-no-img">
+          <p>📷</p>
+          <p>Aún no hay fotos aquí...</p>
+          <small>Añade imágenes a <code>images/[color]/</code><br>y actualiza <code>manifest.json</code></small>
+        </div>
+      </div>
+      <button class="btn-reveal-close" onclick="closeReveal()">♡ Guardar recuerdo</button>
+    </div>
+  </div>
+
+
+  <!-- FOLDER MODAL -->
+  <div class="folder-overlay" id="folder-overlay" style="display:none" onclick="closeFolder()">
+    <div class="folder-modal" onclick="event.stopPropagation()">
+      <button class="btn-close-x" onclick="closeFolder()">✕</button>
+      <h2 class="folder-modal-title">Mis Recuerdos ♡</h2>
+      <div class="color-selector" id="color-selector"></div>
+      <div class="memory-gallery" id="memory-gallery"></div>
+    </div>
+  </div>
+
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" style="display:none" onclick="closeLightbox()">
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    <button class="btn-close-x btn-lb-close" onclick="closeLightbox()">✕</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
